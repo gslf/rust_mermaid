@@ -5,6 +5,9 @@ edition = "2021"
 authors = ["Gioele SL Fierro <hck@gslf.it>"]
 keywords = ["mermaidjs", "diagrams"]
 categories = ["multimedia::images"]
+license-file = "LICENSE.txt"
+description = "Generate mermaid.js diagrams from Rust"
+repository = "https://github.com/gslf/rust_mermaid"
 
 [dependencies]
 base64 = "0.21.2"
