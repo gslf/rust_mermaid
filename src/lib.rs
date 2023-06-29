@@ -2,7 +2,7 @@
 use base64::{Engine as _, engine::general_purpose};
 use image::DynamicImage;
 
-fn create_diagram(description: &str) -> Result<DynamicImage, &str> {
+pub fn create_diagram(description: &str) -> Result<DynamicImage, &str> {
 
     let origin = description.as_bytes();
     let encoded: String = general_purpose::STANDARD_NO_PAD.encode(origin);
@@ -28,7 +28,7 @@ fn create_diagram(description: &str) -> Result<DynamicImage, &str> {
 
 }
 
-fn save_diagram<'a>(description: &'a str, path: &'a str) -> Result<(), &'a str> {
+pub fn save_diagram<'a>(description: &'a str, path: &'a str) -> Result<(), &'a str> {
 
     // Retrieve image with create_diagram function
     let image = match create_diagram(description){
