@@ -14,7 +14,7 @@ fn main() {
     
     match result{
         Ok(_) =>  println!("It's worked!"),
-        Err(error) => panic!("Ops, there is a problem!", error),
+        Err(error) => panic!("Ops, there is a problem! {}", error),
     }
 
     println!("Test diagram file creation:");
@@ -25,11 +25,11 @@ fn main() {
         D--> A & E;
         E--> B & C & D;
     ";
-    let result = create_diagram(description);
+    let result = save_diagram(description, "test.jpg");
     
     match result{
         Ok(_) =>  println!("It's worked!"),
-        Err(error) => panic!("Ops, there is a problem!", error),
+        Err(error) => panic!("Ops, there is a problem! {}", error),
     }
 
 }
